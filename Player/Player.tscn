@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://djhh70yahehd"]
+
+[ext_resource type="Texture2D" uid="uid://csw85guwupk16" path="res://icon.svg" id="1_4kjcj"]
+[ext_resource type="Script" path="res://Player/Player.gd" id="1_jh2cb"]
+[ext_resource type="PackedScene" uid="uid://bbgbywavro0cl" path="res://Components/Health/HealthComponent.tscn" id="2_mo5yt"]
+[ext_resource type="PackedScene" uid="uid://cgmgc316ybdxk" path="res://Components/Hitbox/HitboxComponent.tscn" id="3_ubqnc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dsvol"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2d7w"]
+size = Vector2(64, 64)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_jh2cb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(9.53674e-07, 9.53674e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_4kjcj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_dsvol")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="HealthComponent" parent="." instance=ExtResource("2_mo5yt")]
+Health = 20.0
+
+[node name="HitboxComponent" parent="." node_paths=PackedStringArray("Health_Component") instance=ExtResource("3_ubqnc")]
+Health_Component = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
+scale = Vector2(1.05, 1.05)
+shape = SubResource("RectangleShape2D_h2d7w")
