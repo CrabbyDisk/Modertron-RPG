@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbu8je0fpwgjp"
-path="res://.godot/imported/Mana Progress.png-49ac62e63123761d081079a1c008cfc8.ctex"
+uid="uid://1oxhw5b686in"
+path="res://.godot/imported/Divider.png-5edc6ba6c5f218320a572c08d7481387.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/Bars/Mana Progress.png"
-dest_files=["res://.godot/imported/Mana Progress.png-49ac62e63123761d081079a1c008cfc8.ctex"]
+source_file="res://Assets/Bars/Divider.png"
+dest_files=["res://.godot/imported/Divider.png-5edc6ba6c5f218320a572c08d7481387.ctex"]
 
 [params]
 

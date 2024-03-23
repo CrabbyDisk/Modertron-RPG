@@ -2059,7 +2059,7 @@ sources/0 = SubResource("TileSetAtlasSource_gu5el")
 [node name="World" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
-scale = Vector2(4, 4)
+scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_s8jyj")
 format = 2
 layer_0/name = "Ground"
@@ -2067,12 +2067,6 @@ layer_0/tile_data = PackedInt32Array(-131076, 327680, 0, -65540, 327680, 0, -655
 
 [node name="Player" parent="." instance=ExtResource("1_qj1v0")]
 unique_name_in_owner = true
-
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

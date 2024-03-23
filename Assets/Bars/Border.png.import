@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7knwbagjcyeu"
-path="res://.godot/imported/Mana Border.png-a47f2004f126f1fa143f3c3a65e969d0.ctex"
+uid="uid://bq3srjcrgo7ew"
+path="res://.godot/imported/Border.png-9ddf6aa4036068508d285eb4e4f5bc62.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/Bars/Mana Border.png"
-dest_files=["res://.godot/imported/Mana Border.png-a47f2004f126f1fa143f3c3a65e969d0.ctex"]
+source_file="res://Assets/Bars/Border.png"
+dest_files=["res://.godot/imported/Border.png-9ddf6aa4036068508d285eb4e4f5bc62.ctex"]
 
 [params]
 
