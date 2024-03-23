@@ -22,8 +22,11 @@ texture = ExtResource("1_4kjcj")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_dsvol")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+
 [node name="HealthComponent" type="Node" parent="."]
 script = ExtResource("3_b0rlk")
+health = 20.0
 
 [node name="HitboxComponent" type="Area2D" parent="."]
 script = ExtResource("4_mhyy7")

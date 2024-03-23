@@ -1,0 +1,109 @@
+[gd_scene load_steps=10 format=3 uid="uid://0r0i1srojycx"]
+
+[ext_resource type="Theme" uid="uid://d35gmpsqpfua2" path="res://Assets/Theme.tres" id="1_1iedq"]
+[ext_resource type="Texture2D" uid="uid://0sway6kw47ak" path="res://UI/Bars/Health Border.png" id="1_6xjol"]
+[ext_resource type="Script" path="res://UI/UI.gd" id="1_dxejq"]
+[ext_resource type="Texture2D" uid="uid://ysg08yn1o0ls" path="res://UI/Bars/Health Divider.png" id="2_0x0hk"]
+[ext_resource type="Texture2D" uid="uid://ccm7vv0c8x8jh" path="res://UI/Bars/Health Progress.png" id="3_x5lig"]
+[ext_resource type="Texture2D" uid="uid://7knwbagjcyeu" path="res://UI/Bars/Mana Border.png" id="5_aty73"]
+[ext_resource type="Texture2D" uid="uid://dwlix7qbx51xc" path="res://UI/Bars/Mana Divider.png" id="6_g601g"]
+[ext_resource type="Texture2D" uid="uid://bbu8je0fpwgjp" path="res://UI/Bars/Mana Progress.png" id="6_s26ew"]
+[ext_resource type="Texture2D" uid="uid://dswer3yt1sw6f" path="res://UI/Inventory Background.png" id="8_n4kg7"]
+
+[node name="UI" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_1iedq")
+script = ExtResource("1_dxejq")
+
+[node name="Health" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 556.0
+offset_bottom = 40.0
+max_value = 20.0
+nine_patch_stretch = true
+texture_under = ExtResource("1_6xjol")
+texture_over = ExtResource("2_0x0hk")
+texture_progress = ExtResource("3_x5lig")
+
+[node name="Mana" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 56.0
+offset_right = 556.0
+offset_bottom = 80.0
+max_value = 10.0
+nine_patch_stretch = true
+texture_under = ExtResource("5_aty73")
+texture_over = ExtResource("6_g601g")
+texture_progress = ExtResource("6_s26ew")
+
+[node name="Inventory" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Inventory"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 128.0
+offset_right = 960.0
+offset_bottom = 520.0
+texture = ExtResource("8_n4kg7")
+expand_mode = 3
+
+[node name="Pause" type="Control" parent="."]
+process_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Pause"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Pause"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 128.0
+offset_right = 960.0
+offset_bottom = 520.0
+theme_override_constants/separation = 62
+
+[node name="Label" type="Label" parent="Pause/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "PAUSED"
+horizontal_alignment = 1
+
+[node name="Buttons" type="Control" parent="Pause/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Pause/VBoxContainer/Buttons"]
+layout_mode = 0
+offset_right = 768.0
+offset_bottom = 142.0
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Pause/VBoxContainer/Buttons/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 48
+
+[node name="Resume" type="Button" parent="Pause/VBoxContainer/Buttons/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Resume"
+
+[node name="Quit" type="Button" parent="Pause/VBoxContainer/Buttons/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="Pause/VBoxContainer/Buttons/HBoxContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Pause/VBoxContainer/Buttons/HBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
