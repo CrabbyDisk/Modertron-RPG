@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 const speed : int = 300
+static var mana : int = 10
 
 func _physics_process(delta):
 	var input_dir = Input.get_vector("left", "right", "up", "down")

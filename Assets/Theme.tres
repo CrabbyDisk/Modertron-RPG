@@ -1,0 +1,66 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://d35gmpsqpfua2"]
+
+[ext_resource type="FontFile" uid="uid://dpa1dmhvf5u5l" path="res://Assets/PixelifySans.ttf" id="1_pxxpb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_63owx"]
+bg_color = Color(0.584314, 0.552941, 0.541176, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.901961, 0.901961, 0.901961, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 2
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ruska"]
+bg_color = Color(0.709804, 0.682353, 0.670588, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.901961, 0.901961, 0.901961, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 2
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ydb40"]
+bg_color = Color(0.498039, 0.466667, 0.454902, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.901961, 0.901961, 0.901961, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 2
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+anti_aliasing = false
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 30
+Button/fonts/font = ExtResource("1_pxxpb")
+Button/styles/hover = SubResource("StyleBoxFlat_63owx")
+Button/styles/normal = SubResource("StyleBoxFlat_ruska")
+Button/styles/pressed = SubResource("StyleBoxFlat_ydb40")
+Label/fonts/font = ExtResource("1_pxxpb")
