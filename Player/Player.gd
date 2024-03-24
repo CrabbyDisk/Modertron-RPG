@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const speed : int = 300
+const speed : int = 200
 static var mana : int = 10
 
 func _physics_process(delta):

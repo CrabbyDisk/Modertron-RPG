@@ -19,7 +19,6 @@ theme = ExtResource("1_1iedq")
 script = ExtResource("1_dxejq")
 
 [node name="Inventory" type="Control" parent="."]
-visible = false
 layout_mode = 2
 anchors_preset = 0
 offset_left = 16.0
@@ -31,10 +30,10 @@ grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="Inventory"]
 layout_mode = 0
-offset_left = 192.0
-offset_top = 128.0
-offset_right = 960.0
-offset_bottom = 520.0
+offset_left = 112.0
+offset_top = 48.0
+offset_right = 504.0
+offset_bottom = 248.0
 texture = ExtResource("8_n4kg7")
 expand_mode = 3
 
@@ -54,6 +53,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
 grow_horizontal = 2
 grow_vertical = 2
 
