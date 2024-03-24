@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://d35gmpsqpfua2" path="res://Assets/Theme.tres" id="1_1iedq"]
 [ext_resource type="Script" path="res://UI/ui.gd" id="2_k8jnt"]
-[ext_resource type="Texture2D" uid="uid://bq3srjcrgo7ew" path="res://Assets/Bars/Border.png" id="6_5cxh3"]
+[ext_resource type="Texture2D" uid="uid://dn50hkw5p6mrj" path="res://Assets/Bars/Under.png" id="4_4jp3i"]
 [ext_resource type="Texture2D" uid="uid://1oxhw5b686in" path="res://Assets/Bars/Divider.png" id="7_7pm7q"]
 [ext_resource type="Texture2D" uid="uid://dswer3yt1sw6f" path="res://UI/Inventory Background.png" id="8_n4kg7"]
 [ext_resource type="Texture2D" uid="uid://br2cvyndtd61o" path="res://Assets/Bars/Progress.png" id="8_yjipc"]
@@ -98,7 +98,7 @@ offset_top = 16.0
 offset_right = 208.0
 offset_bottom = 28.0
 max_value = 20.0
-texture_under = ExtResource("6_5cxh3")
+texture_under = ExtResource("4_4jp3i")
 texture_over = ExtResource("7_7pm7q")
 texture_progress = ExtResource("8_yjipc")
 tint_under = Color(1, 0.172549, 0.12549, 1)
@@ -112,7 +112,7 @@ offset_top = 32.0
 offset_right = 208.0
 offset_bottom = 44.0
 max_value = 10.0
-texture_under = ExtResource("6_5cxh3")
+texture_under = ExtResource("4_4jp3i")
 texture_over = ExtResource("7_7pm7q")
 texture_progress = ExtResource("8_yjipc")
 tint_under = Color(0.392157, 0.588235, 1, 1)
