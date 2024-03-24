@@ -1,6 +1,6 @@
 extends Control
 
-var inventory_is_showing = false
+var inventory_is_showing := false
 
 func _ready():
 	$Inventory.hide()
