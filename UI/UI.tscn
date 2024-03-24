@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://0r0i1srojycx"]
 
 [ext_resource type="Theme" uid="uid://d35gmpsqpfua2" path="res://Assets/Theme.tres" id="1_1iedq"]
-[ext_resource type="Script" path="res://UI/UI.gd" id="1_dxejq"]
+[ext_resource type="Script" path="res://UI/ui.gd" id="2_k8jnt"]
 [ext_resource type="Texture2D" uid="uid://bq3srjcrgo7ew" path="res://Assets/Bars/Border.png" id="6_5cxh3"]
 [ext_resource type="Texture2D" uid="uid://1oxhw5b686in" path="res://Assets/Bars/Divider.png" id="7_7pm7q"]
 [ext_resource type="Texture2D" uid="uid://dswer3yt1sw6f" path="res://UI/Inventory Background.png" id="8_n4kg7"]
@@ -16,7 +16,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_1iedq")
-script = ExtResource("1_dxejq")
+script = ExtResource("2_k8jnt")
 
 [node name="Inventory" type="Control" parent="."]
 layout_mode = 2

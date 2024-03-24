@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://huuklshdoosx"]
+
+[ext_resource type="Script" path="res://Components/pathfind_component.gd" id="1_4bkbu"]
+[ext_resource type="Script" path="res://Enemies/dummy.gd" id="1_kefbn"]
+[ext_resource type="Texture2D" uid="uid://csw85guwupk16" path="res://icon.svg" id="2_j305i"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8lnxj"]
+radius = 16.0
+
+[node name="Dummy" type="CharacterBody2D"]
+motion_mode = 1
+wall_min_slide_angle = 0.0
+script = ExtResource("1_kefbn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8lnxj")
+
+[node name="PathfindComponent" type="NavigationAgent2D" parent="."]
+script = ExtResource("1_4bkbu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_j305i")
