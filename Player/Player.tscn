@@ -12,6 +12,7 @@ size = Vector2(32, 32)
 size = Vector2(32, 32)
 
 [node name="Player" type="CharacterBody2D"]
+collision_mask = 16
 script = ExtResource("1_jh2cb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -29,6 +30,7 @@ script = ExtResource("3_b0rlk")
 health = 20.0
 
 [node name="HitboxComponent" type="Area2D" parent="."]
+collision_mask = 12
 script = ExtResource("4_mhyy7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]

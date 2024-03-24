@@ -2,6 +2,10 @@ extends Control
 
 var inventory_is_showing = false
 
+func _ready():
+	$Inventory.hide()
+	$Pause.hide()
+
 func _process(delta):
 	## NOTE: Make sure to always make the player node a unique name or this code won't work
 	$Health.value = %Player/HealthComponent.health
