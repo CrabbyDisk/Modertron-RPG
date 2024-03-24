@@ -19,6 +19,7 @@ theme = ExtResource("1_1iedq")
 script = ExtResource("2_k8jnt")
 
 [node name="Inventory" type="Control" parent="."]
+visible = false
 layout_mode = 2
 anchors_preset = 0
 offset_left = 16.0
@@ -39,6 +40,7 @@ expand_mode = 3
 
 [node name="Pause" type="Control" parent="."]
 process_mode = 3
+visible = false
 layout_mode = 2
 anchors_preset = 0
 offset_left = 16.0
