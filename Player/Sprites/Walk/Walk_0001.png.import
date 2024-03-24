@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3xupvvaqgtlg"
-path="res://.godot/imported/Axe Head.png-c48466902425157e019e7f3707333f82.ctex"
+uid="uid://b71tyor8rack5"
+path="res://.godot/imported/Walk_0001.png-f0ff440ba9f32abc8b173fbaa67afabc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Weapon Textures/Axe/Axe Head.png"
-dest_files=["res://.godot/imported/Axe Head.png-c48466902425157e019e7f3707333f82.ctex"]
+source_file="res://Player/Sprites/Walk/Walk_0001.png"
+dest_files=["res://.godot/imported/Walk_0001.png-f0ff440ba9f32abc8b173fbaa67afabc.ctex"]
 
 [params]
 
