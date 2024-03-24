@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3xupvvaqgtlg"
-path="res://.godot/imported/Axe Head.png-c48466902425157e019e7f3707333f82.ctex"
+uid="uid://bjqem3ov4jt3h"
+path="res://.godot/imported/Idle_0005.png-b91bc2061ebeaa18685ac9797ed59ba1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Weapon Textures/Axe/Axe Head.png"
-dest_files=["res://.godot/imported/Axe Head.png-c48466902425157e019e7f3707333f82.ctex"]
+source_file="res://Player/Sprites/Idle/Idle_0005.png"
+dest_files=["res://.godot/imported/Idle_0005.png-b91bc2061ebeaa18685ac9797ed59ba1.ctex"]
 
 [params]
 

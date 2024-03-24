@@ -23,6 +23,16 @@ window/size/mode=3
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_height"
 
+[file_customization]
+
+folder_colors={
+"res://Assets/": "teal",
+"res://Components/": "orange",
+"res://Enemies/": "red",
+"res://Player/": "blue",
+"res://UI/": "green"
+}
+
 [input]
 
 left={

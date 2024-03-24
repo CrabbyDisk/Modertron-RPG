@@ -1,27 +1,84 @@
-[gd_scene load_steps=7 format=3 uid="uid://djhh70yahehd"]
+[gd_scene load_steps=17 format=3 uid="uid://djhh70yahehd"]
 
-[ext_resource type="Texture2D" uid="uid://csw85guwupk16" path="res://icon.svg" id="1_4kjcj"]
 [ext_resource type="Script" path="res://Player/player.gd" id="1_dt8dx"]
+[ext_resource type="Texture2D" uid="uid://dbyecoljivs1s" path="res://Player/Sprites/Idle/Idle_0001.png" id="2_itvij"]
 [ext_resource type="Script" path="res://Components/health_component.gd" id="3_b0rlk"]
+[ext_resource type="Texture2D" uid="uid://l4jbxuyos67n" path="res://Player/Sprites/Idle/Idle_0002.png" id="3_cfmsm"]
+[ext_resource type="Texture2D" uid="uid://bgqui25xjwr5m" path="res://Player/Sprites/Idle/Idle_0003.png" id="4_6mqqj"]
 [ext_resource type="Script" path="res://Components/hitbox_component.gd" id="4_mhyy7"]
+[ext_resource type="Texture2D" uid="uid://d241vhvin8ec3" path="res://Player/Sprites/Idle/Idle_0004.png" id="5_pjmog"]
+[ext_resource type="Texture2D" uid="uid://bjqem3ov4jt3h" path="res://Player/Sprites/Idle/Idle_0005.png" id="6_ct3aa"]
+[ext_resource type="Texture2D" uid="uid://cf254ogngmjae" path="res://Player/Sprites/Idle/Idle_0006.png" id="7_qgoay"]
+[ext_resource type="Texture2D" uid="uid://b71tyor8rack5" path="res://Player/Sprites/Walk/Walk_0001.png" id="8_q6r8m"]
+[ext_resource type="Texture2D" uid="uid://d3frg05f7ppmo" path="res://Player/Sprites/Walk/Walk_0002.png" id="9_n5rtg"]
+[ext_resource type="Texture2D" uid="uid://cqxao6vbaypmi" path="res://Player/Sprites/Walk/Walk_0003.png" id="10_1n3au"]
+[ext_resource type="Texture2D" uid="uid://cqlifiwmj3pva" path="res://Player/Sprites/Walk/Walk_0004.png" id="11_h60lb"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dsvol"]
-size = Vector2(32, 32)
+[sub_resource type="SpriteFrames" id="SpriteFrames_gube8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_itvij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_cfmsm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6mqqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pjmog")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ct3aa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qgoay")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_q6r8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_n5rtg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_1n3au")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_h60lb")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xshpc"]
-size = Vector2(32, 32)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r1toj"]
+radius = 8.0
+height = 16.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dy0wh"]
+radius = 8.0
+height = 32.0
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 16
 script = ExtResource("1_dt8dx")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(9.53674e-07, 9.53674e-07)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_4kjcj")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_gube8")
+animation = &"walk"
+autoplay = "idle"
+frame_progress = 0.0660707
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_dsvol")
+position = Vector2(0, 8)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_r1toj")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -29,9 +86,12 @@ shape = SubResource("RectangleShape2D_dsvol")
 script = ExtResource("3_b0rlk")
 health = 20.0
 
-[node name="HitboxComponent" type="Area2D" parent="."]
+[node name="HitboxComponent" type="Area2D" parent="." node_paths=PackedStringArray("health_component")]
 collision_mask = 12
 script = ExtResource("4_mhyy7")
+health_component = NodePath("../HealthComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
-shape = SubResource("RectangleShape2D_xshpc")
+shape = SubResource("CapsuleShape2D_dy0wh")
+
+[connection signal="body_entered" from="HitboxComponent" to="HitboxComponent" method="_on_body_entered"]
