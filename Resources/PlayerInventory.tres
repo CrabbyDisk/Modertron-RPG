@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PlayerInventory" load_steps=4 format=3 uid="uid://dysqy7h7phehf"]
+
+[ext_resource type="Resource" uid="uid://kau5sqasydfh" path="res://Resources/InventoryItems/PlaceholderItem2.tres" id="1_3st70"]
+[ext_resource type="Script" path="res://Resources/player_inventory.gd" id="1_e32xc"]
+[ext_resource type="Resource" uid="uid://vojgv1aunnny" path="res://Resources/InventoryItems/PlaceholderItem.tres" id="1_qtfus"]
+
+[resource]
+script = ExtResource("1_e32xc")
+items = Array[Resource("res://Resources/inventory_item.gd")]([ExtResource("1_3st70"), null, ExtResource("1_3st70"), ExtResource("1_qtfus"), ExtResource("1_qtfus"), null, ExtResource("1_qtfus"), null, ExtResource("1_3st70"), ExtResource("1_qtfus")])

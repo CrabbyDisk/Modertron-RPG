@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwxludf1yfnlp"]
+
+[ext_resource type="Texture2D" uid="uid://bnnarew6q3iwv" path="res://UI/Inventory Slot.png" id="1_v7u37"]
+
+[node name="InventorySlot" type="Control"]
+layout_mode = 3
+anchor_right = 0.05
+anchor_bottom = 0.089
+offset_bottom = -0.0400009
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+offset_right = 32.0
+offset_bottom = 32.0
+texture = ExtResource("1_v7u37")
+expand_mode = 3
+
+[node name="Item" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 24.0
+offset_bottom = 24.0

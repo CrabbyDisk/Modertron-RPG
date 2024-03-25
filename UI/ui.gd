@@ -18,6 +18,7 @@ func _process(delta):
 	mana_bar.value = player.mana
 	
 	if Input.is_action_just_pressed("inventory"):
+		inventory.update_inventory()
 		inventory_is_showing = !inventory_is_showing
 		inventory.visible = inventory_is_showing
 		get_tree().paused = inventory_is_showing
