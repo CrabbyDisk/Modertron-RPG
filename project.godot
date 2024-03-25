@@ -30,6 +30,7 @@ folder_colors={
 "res://Components/": "orange",
 "res://Enemies/": "red",
 "res://Player/": "blue",
+"res://Resources/": "purple",
 "res://UI/": "green"
 }
 

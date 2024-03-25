@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://kau5sqasydfh"]
+
+[ext_resource type="Script" path="res://Resources/inventory_item.gd" id="1_aw2yr"]
+[ext_resource type="Texture2D" uid="uid://brpo2maa1ymph" path="res://Assets/Weapon Textures/Pickaxe/Pickaxe Sillouhete.png" id="2_qlgc6"]
+
+[resource]
+script = ExtResource("1_aw2yr")
+name = "Placeholder 2"
+texture = ExtResource("2_qlgc6")
