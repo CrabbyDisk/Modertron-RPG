@@ -91,7 +91,7 @@ text = "Resume"
 layout_mode = 2
 text = "Quit"
 
-[node name="Health" type="TextureProgressBar" parent="."]
+[node name="HealthBar" type="TextureProgressBar" parent="."]
 layout_mode = 2
 offset_left = 16.0
 offset_top = 16.0
@@ -105,7 +105,7 @@ tint_under = Color(1, 0.172549, 0.12549, 1)
 tint_over = Color(1, 0.172549, 0.12549, 1)
 tint_progress = Color(1, 0.172549, 0.12549, 1)
 
-[node name="Mana" type="TextureProgressBar" parent="."]
+[node name="ManaBar" type="TextureProgressBar" parent="."]
 layout_mode = 2
 offset_left = 16.0
 offset_top = 32.0

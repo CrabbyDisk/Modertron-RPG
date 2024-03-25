@@ -13,12 +13,12 @@ motion_mode = 1
 wall_min_slide_angle = 0.0
 script = ExtResource("1_kefbn")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_8lnxj")
-
 [node name="PathfindComponent" type="NavigationAgent2D" parent="."]
 script = ExtResource("1_4bkbu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_j305i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8lnxj")
