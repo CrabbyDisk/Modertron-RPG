@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://djhh70yahehd"]
+[gd_scene load_steps=26 format=3 uid="uid://djhh70yahehd"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_dt8dx"]
 [ext_resource type="Texture2D" uid="uid://dbyecoljivs1s" path="res://Player/Sprites/Idle/Idle_0001.png" id="2_itvij"]
@@ -13,6 +13,13 @@
 [ext_resource type="Texture2D" uid="uid://d3frg05f7ppmo" path="res://Player/Sprites/Walk/Walk_0002.png" id="9_n5rtg"]
 [ext_resource type="Texture2D" uid="uid://cqxao6vbaypmi" path="res://Player/Sprites/Walk/Walk_0003.png" id="10_1n3au"]
 [ext_resource type="Texture2D" uid="uid://cqlifiwmj3pva" path="res://Player/Sprites/Walk/Walk_0004.png" id="11_h60lb"]
+[ext_resource type="Script" path="res://Components/attack_component.gd" id="14_6oxu7"]
+[ext_resource type="Texture2D" uid="uid://dk5hpy0befpp4" path="res://Assets/Slash/Slash_0001.png" id="15_w80xy"]
+[ext_resource type="Texture2D" uid="uid://duywkkop8ybgs" path="res://Assets/Slash/Slash_0002.png" id="16_xml3x"]
+[ext_resource type="Texture2D" uid="uid://bpyw2iu6iofue" path="res://Assets/Slash/Slash_0003.png" id="17_k3dqb"]
+[ext_resource type="Texture2D" uid="uid://x87gkwve4bkk" path="res://Assets/Slash/Slash_0004.png" id="18_qhcwx"]
+[ext_resource type="Texture2D" uid="uid://cme1jn4hdwsko" path="res://Assets/Slash/Slash_0005.png" id="19_3ushk"]
+[ext_resource type="Texture2D" uid="uid://chr6s4dp17r88" path="res://Assets/Slash/Slash_0006.png" id="20_lench"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gube8"]
 animations = [{
@@ -65,7 +72,37 @@ height = 16.0
 radius = 8.0
 height = 32.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ltniv"]
+size = Vector2(16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2wu5a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_w80xy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_xml3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_k3dqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_qhcwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_3ushk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_lench")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 15.0
+}]
+
 [node name="Player" type="CharacterBody2D"]
+collision_mask = 20
 script = ExtResource("1_dt8dx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -91,6 +128,25 @@ script = ExtResource("4_mhyy7")
 health_component = NodePath("../HealthComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
+scale = Vector2(1.01, 1.01)
 shape = SubResource("CapsuleShape2D_dy0wh")
 
+[node name="AttackComponent" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("14_6oxu7")
+damage = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackComponent"]
+position = Vector2(24, 0)
+shape = SubResource("RectangleShape2D_ltniv")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AttackComponent"]
+position = Vector2(24, 0)
+sprite_frames = SubResource("SpriteFrames_2wu5a")
+animation = &"attack"
+
+[connection signal="damaged" from="HealthComponent" to="." method="_on_damaged"]
 [connection signal="body_entered" from="HitboxComponent" to="HitboxComponent" method="_on_body_entered"]
+[connection signal="area_entered" from="AttackComponent" to="AttackComponent" method="_on_hitbox_entered"]

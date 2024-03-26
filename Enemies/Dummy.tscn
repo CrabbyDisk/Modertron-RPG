@@ -1,14 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://huuklshdoosx"]
+[gd_scene load_steps=8 format=3 uid="uid://huuklshdoosx"]
 
 [ext_resource type="Script" path="res://Components/pathfind_component.gd" id="1_4bkbu"]
 [ext_resource type="Script" path="res://Enemies/dummy.gd" id="1_kefbn"]
 [ext_resource type="Texture2D" uid="uid://csw85guwupk16" path="res://icon.svg" id="2_j305i"]
+[ext_resource type="Script" path="res://Components/health_component.gd" id="4_dae3l"]
+[ext_resource type="Script" path="res://Components/hitbox_component.gd" id="5_2xg35"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8lnxj"]
 radius = 16.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nvg7h"]
+size = Vector2(32, 32)
+
 [node name="Dummy" type="CharacterBody2D"]
 collision_layer = 4
+collision_mask = 17
 motion_mode = 1
 wall_min_slide_angle = 0.0
 script = ExtResource("1_kefbn")
@@ -22,3 +28,18 @@ texture = ExtResource("2_j305i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_8lnxj")
+
+[node name="HealthComponent" type="Node" parent="."]
+script = ExtResource("4_dae3l")
+health = 10.0
+
+[node name="HitboxComponent" type="Area2D" parent="." node_paths=PackedStringArray("health_component")]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("5_2xg35")
+health_component = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
+shape = SubResource("RectangleShape2D_nvg7h")
+
+[connection signal="damaged" from="HealthComponent" to="." method="_on_damaged"]
