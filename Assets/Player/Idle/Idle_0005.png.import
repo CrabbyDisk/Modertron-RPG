@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqxao6vbaypmi"
-path="res://.godot/imported/Walk_0003.png-8274d89b4b38491883fb1b1490e707f1.ctex"
+uid="uid://bjqem3ov4jt3h"
+path="res://.godot/imported/Idle_0005.png-fce8e8c3581c6c45e37899f5e83fbed9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/Sprites/Walk/Walk_0003.png"
-dest_files=["res://.godot/imported/Walk_0003.png-8274d89b4b38491883fb1b1490e707f1.ctex"]
+source_file="res://Assets/Player/Idle/Idle_0005.png"
+dest_files=["res://.godot/imported/Idle_0005.png-fce8e8c3581c6c45e37899f5e83fbed9.ctex"]
 
 [params]
 

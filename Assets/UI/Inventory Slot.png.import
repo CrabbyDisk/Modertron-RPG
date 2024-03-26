@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgqui25xjwr5m"
-path="res://.godot/imported/Idle_0003.png-6ec57001cda9626c39d803223b495637.ctex"
+uid="uid://bnnarew6q3iwv"
+path="res://.godot/imported/Inventory Slot.png-b4c67f78b95acbc8859a147bcb6a244a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/Sprites/Idle/Idle_0003.png"
-dest_files=["res://.godot/imported/Idle_0003.png-6ec57001cda9626c39d803223b495637.ctex"]
+source_file="res://Assets/UI/Inventory Slot.png"
+dest_files=["res://.godot/imported/Inventory Slot.png-b4c67f78b95acbc8859a147bcb6a244a.ctex"]
 
 [params]
 

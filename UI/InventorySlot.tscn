@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cwxludf1yfnlp"]
 
-[ext_resource type="Texture2D" uid="uid://bnnarew6q3iwv" path="res://UI/Inventory Slot.png" id="1_v7u37"]
+[ext_resource type="Texture2D" uid="uid://bnnarew6q3iwv" path="res://Assets/UI/Inventory Slot.png" id="1_v7u37"]
 
 [node name="InventorySlot" type="Control"]
 layout_mode = 3
