@@ -1,16 +1,24 @@
 extends CharacterBody2D
 
-@export var player: CharacterBody2D
-
-@onready var pathfinding = $PathfindComponent
 const SPEED = 150.0
-func _ready():
-	pathfinding.target = player
-	pathfinding.parent = self
 
+var player_agent = GSAISteeringAgent.new()
+
+@onready var agent := await GSAICharacterBody2DAgent.new(self, 1)
+@onready var accel := GSAITargetAcceleration.new()
+
+
+@onready var pursue := GSAIPursue.new(agent, player_agent)
+
+func _ready():
+	agent.linear_acceleration_max = 100
+	agent.linear_speed_max = 100
 func _physics_process(delta):
-	velocity = lerp(velocity, pathfinding.get_dir() * SPEED, .1)
-	move_and_slide()
+	if not player_agent:
+		return
+	pursue._calculate_steering(accel)
+	agent._apply_steering(accel, delta)
+	
 	
 func _on_damaged():
 	$Sprite2D.modulate = "ff0000"

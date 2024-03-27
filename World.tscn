@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://45qwsuwu18y"]
+[gd_scene load_steps=10 format=3 uid="uid://45qwsuwu18y"]
 
+[ext_resource type="Script" path="res://world.gd" id="1_2gxe0"]
 [ext_resource type="Texture2D" uid="uid://5vqpauv34vo6" path="res://Assets/Terrain/roguelikeSheet_transparent.png" id="1_xn2ec"]
 [ext_resource type="PackedScene" uid="uid://djhh70yahehd" path="res://Player/Player.tscn" id="2_a664c"]
 [ext_resource type="PackedScene" uid="uid://0r0i1srojycx" path="res://UI/UI.tscn" id="3_w6puv"]
@@ -5526,6 +5527,7 @@ navigation_layer_0/layers = 1
 sources/0 = SubResource("TileSetAtlasSource_gu5el")
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_2gxe0")
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(2, 2)
@@ -5541,18 +5543,16 @@ unique_name_in_owner = true
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource("3_w6puv")]
 
-[node name="Dummy" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_d8oxu")]
-position = Vector2(-281, -127)
-player = NodePath("../Player")
+[node name="Dummies" type="Node" parent="."]
 
-[node name="Dummy2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_d8oxu")]
-position = Vector2(-197, -313)
-player = NodePath("../Player")
-
-[node name="Dummy3" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_d8oxu")]
-position = Vector2(-290, -215)
-player = NodePath("../Player")
-
-[node name="Dummy4" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_d8oxu")]
+[node name="Dummy4" parent="Dummies" instance=ExtResource("4_d8oxu")]
 position = Vector2(-288, -313)
-player = NodePath("../Player")
+
+[node name="Dummy3" parent="Dummies" instance=ExtResource("4_d8oxu")]
+position = Vector2(-290, -215)
+
+[node name="Dummy2" parent="Dummies" instance=ExtResource("4_d8oxu")]
+position = Vector2(-197, -313)
+
+[node name="Dummy" parent="Dummies" instance=ExtResource("4_d8oxu")]
+position = Vector2(-281, -127)

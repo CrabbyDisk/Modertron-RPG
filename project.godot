@@ -29,6 +29,7 @@ folder_colors={
 "res://Assets/": "teal",
 "res://Components/": "orange",
 "res://Enemies/": "red",
+"res://Pathfinding/": "gray",
 "res://Player/": "blue",
 "res://Resources/": "purple",
 "res://UI/": "green"

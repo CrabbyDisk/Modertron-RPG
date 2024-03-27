@@ -102,7 +102,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D"]
-collision_mask = 20
+collision_mask = 17
 script = ExtResource("1_dt8dx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
