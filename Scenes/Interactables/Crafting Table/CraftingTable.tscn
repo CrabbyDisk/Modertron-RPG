@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://bfhellko8kxf6"]
+
+[ext_resource type="Script" path="res://Scenes/Interactables/Crafting Table/crafting_table.gd" id="1_0cf6y"]
+[ext_resource type="Texture2D" uid="uid://csw85guwupk16" path="res://icon.svg" id="1_ak8la"]
+[ext_resource type="Texture2D" uid="uid://70kyjtomtkee" path="res://Assets/UI/Inventory Background.png" id="3_5t4sq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ugpsv"]
+size = Vector2(32, 32)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nkifk"]
+radius = 40.0
+
+[node name="CraftingTable" type="StaticBody2D"]
+process_mode = 3
+collision_layer = 16
+collision_mask = 0
+script = ExtResource("1_0cf6y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_ak8la")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ugpsv")
+
+[node name="Key" type="Sprite2D" parent="."]
+position = Vector2(0, -32)
+scale = Vector2(0.125, 0.117187)
+texture = ExtResource("1_ak8la")
+
+[node name="InteractableArea" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea"]
+shape = SubResource("CircleShape2D_nkifk")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_left = -114.0
+offset_top = -60.0
+offset_right = 114.0
+offset_bottom = 60.0
+texture = ExtResource("3_5t4sq")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[connection signal="body_entered" from="InteractableArea" to="." method="_on_interactable_area_entered"]
+[connection signal="body_exited" from="InteractableArea" to="." method="_on_interactable_area_exited"]
