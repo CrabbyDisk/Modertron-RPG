@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://naxt83u0uugi"]
+
+[ext_resource type="Texture2D" uid="uid://csw85guwupk16" path="res://icon.svg" id="1_ce877"]
+[ext_resource type="Script" path="res://Components/health_component.gd" id="2_ss82s"]
+[ext_resource type="Script" path="res://Components/hitbox_component.gd" id="3_ens74"]
+[ext_resource type="Script" path="res://Components/mineable_component.gd" id="4_ptkx0"]
+[ext_resource type="Resource" uid="uid://dhe3n2ui7s3ev" path="res://Resources/InventoryItems/Stick.tres" id="5_kl6sf"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8momq"]
+radius = 16.0
+height = 48.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0fj55"]
+radius = 16.0
+height = 64.0
+
+[node name="Tree" type="StaticBody2D"]
+collision_layer = 16
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 1, 0.133333, 1)
+position = Vector2(0, -16)
+scale = Vector2(0.25, 0.5)
+texture = ExtResource("1_ce877")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
+shape = SubResource("CapsuleShape2D_8momq")
+
+[node name="HealthComponent" type="Node" parent="."]
+script = ExtResource("2_ss82s")
+health = 4.0
+
+[node name="HitboxComponent" type="Area2D" parent="." node_paths=PackedStringArray("health_component")]
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("3_ens74")
+health_component = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
+position = Vector2(0, -16)
+shape = SubResource("CapsuleShape2D_0fj55")
+
+[node name="MineableComponent" type="Node" parent="."]
+script = ExtResource("4_ptkx0")
+item = ExtResource("5_kl6sf")
+amount_min = 1
+amount_max = 3
+
+[connection signal="dead" from="HealthComponent" to="MineableComponent" method="_on_object_mined"]

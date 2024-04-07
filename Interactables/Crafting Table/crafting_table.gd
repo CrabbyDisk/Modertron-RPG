@@ -3,7 +3,7 @@ extends StaticBody2D
 @export var craftable_items : Array[CraftableItem]
 
 @onready var key = $Key
-@onready var ui = $UI
+@onready var ui = $CanvasLayer/UI
 
 
 func _on_interactable_activated():
@@ -16,3 +16,4 @@ func _on_interactable_deactivated():
 
 func _on_interactable_used():
 	ui.visible = !ui.visible
+	get_tree().paused = ui.visible

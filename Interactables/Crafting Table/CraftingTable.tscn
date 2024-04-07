@@ -36,7 +36,9 @@ script = ExtResource("4_gmc5q")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
 shape = SubResource("CircleShape2D_6ghjh")
 
-[node name="UI" type="Control" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" type="Control" parent="CanvasLayer"]
 visible = false
 layout_mode = 3
 anchors_preset = 8
@@ -48,7 +50,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 
-[node name="NinePatchRect" type="NinePatchRect" parent="UI"]
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/UI"]
 layout_mode = 0
 offset_left = -114.0
 offset_top = -60.0

@@ -11,6 +11,7 @@ func _input(event):
 
 
 func _ready():
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	player = get_tree().get_current_scene().get_node("Player")
 
 
