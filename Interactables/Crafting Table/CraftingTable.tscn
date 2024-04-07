@@ -1,14 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://bfhellko8kxf6"]
+[gd_scene load_steps=7 format=3 uid="uid://bfhellko8kxf6"]
 
-[ext_resource type="Script" path="res://Scenes/Interactables/Crafting Table/crafting_table.gd" id="1_0cf6y"]
+[ext_resource type="Script" path="res://Interactables/Crafting Table/crafting_table.gd" id="1_0cf6y"]
 [ext_resource type="Texture2D" uid="uid://csw85guwupk16" path="res://icon.svg" id="1_ak8la"]
 [ext_resource type="Texture2D" uid="uid://70kyjtomtkee" path="res://Assets/UI/Inventory Background.png" id="3_5t4sq"]
+[ext_resource type="Script" path="res://Interaction/interactable.gd" id="4_gmc5q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ugpsv"]
 size = Vector2(32, 32)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_nkifk"]
-radius = 40.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_6ghjh"]
+radius = 48.0
 
 [node name="CraftingTable" type="StaticBody2D"]
 process_mode = 3
@@ -24,19 +25,19 @@ texture = ExtResource("1_ak8la")
 shape = SubResource("RectangleShape2D_ugpsv")
 
 [node name="Key" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(0, -32)
 scale = Vector2(0.125, 0.117187)
 texture = ExtResource("1_ak8la")
 
-[node name="InteractableArea" type="Area2D" parent="."]
-collision_layer = 0
+[node name="Interactable" type="Area2D" parent="."]
+script = ExtResource("4_gmc5q")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea"]
-shape = SubResource("CircleShape2D_nkifk")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+shape = SubResource("CircleShape2D_6ghjh")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="UI" type="Control" parent="CanvasLayer"]
+[node name="UI" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -47,7 +48,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 
-[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/UI"]
+[node name="NinePatchRect" type="NinePatchRect" parent="UI"]
 layout_mode = 0
 offset_left = -114.0
 offset_top = -60.0
@@ -59,5 +60,6 @@ patch_margin_top = 5
 patch_margin_right = 7
 patch_margin_bottom = 7
 
-[connection signal="body_entered" from="InteractableArea" to="." method="_on_interactable_area_entered"]
-[connection signal="body_exited" from="InteractableArea" to="." method="_on_interactable_area_exited"]
+[connection signal="activated" from="Interactable" to="." method="_on_interactable_activated"]
+[connection signal="deactivated" from="Interactable" to="." method="_on_interactable_deactivated"]
+[connection signal="used" from="Interactable" to="." method="_on_interactable_used"]

@@ -1,11 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://45qwsuwu18y"]
+[gd_scene load_steps=12 format=3 uid="uid://45qwsuwu18y"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_2gxe0"]
 [ext_resource type="Texture2D" uid="uid://5vqpauv34vo6" path="res://Assets/Terrain/roguelikeSheet_transparent.png" id="1_xn2ec"]
 [ext_resource type="PackedScene" uid="uid://djhh70yahehd" path="res://Player/Player.tscn" id="2_a664c"]
 [ext_resource type="PackedScene" uid="uid://0r0i1srojycx" path="res://UI/UI.tscn" id="3_w6puv"]
 [ext_resource type="PackedScene" uid="uid://huuklshdoosx" path="res://Enemies/Dummy.tscn" id="4_d8oxu"]
-[ext_resource type="PackedScene" uid="uid://bfhellko8kxf6" path="res://Scenes/Interactables/Crafting Table/CraftingTable.tscn" id="6_mx2ad"]
+[ext_resource type="PackedScene" uid="uid://bfhellko8kxf6" path="res://Interactables/Crafting Table/CraftingTable.tscn" id="6_mx2ad"]
+[ext_resource type="PackedScene" uid="uid://cfo6rt3lhtdxk" path="res://Interactables/Thing.tscn" id="7_607aa"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_fv1h5"]
 vertices = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
@@ -5560,3 +5561,6 @@ position = Vector2(-197, -313)
 
 [node name="Dummy" parent="Dummies" instance=ExtResource("4_d8oxu")]
 position = Vector2(-281, -127)
+
+[node name="Thing" parent="." instance=ExtResource("7_607aa")]
+position = Vector2(261, 28)
