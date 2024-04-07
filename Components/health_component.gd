@@ -5,6 +5,7 @@ class_name HealthComponent
 @export var defense : float
 
 signal damaged
+signal dead
 
 func damage(amount : int):
 	#Code for calculating damage
@@ -18,4 +19,5 @@ func damage(amount : int):
 	##TODO: When the player dies put the player in a death screen
 	# Code for dying
 	if health <= 0 and not get_parent() is Player:
+		dead.emit()
 		get_parent().queue_free()
