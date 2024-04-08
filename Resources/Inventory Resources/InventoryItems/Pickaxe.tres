@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://vojgv1aunnny"]
 
-[ext_resource type="Script" path="res://Resources/inventory_item.gd" id="1_uacgs"]
+[ext_resource type="Script" path="res://Resources/Inventory Resources/inventory_item.gd" id="1_uacgs"]
 [ext_resource type="Texture2D" uid="uid://bahg1h0t6hw1c" path="res://Assets/Weapon Textures/Axe/Axe Sillouhete.png" id="2_p36q6"]
 
 [resource]

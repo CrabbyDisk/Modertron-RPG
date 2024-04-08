@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Components/health_component.gd" id="2_ss82s"]
 [ext_resource type="Script" path="res://Components/hitbox_component.gd" id="3_ens74"]
 [ext_resource type="Script" path="res://Components/mineable_component.gd" id="4_ptkx0"]
-[ext_resource type="Resource" uid="uid://dhe3n2ui7s3ev" path="res://Resources/InventoryItems/Stick.tres" id="5_kl6sf"]
+[ext_resource type="Resource" uid="uid://dhe3n2ui7s3ev" path="res://Resources/Inventory Resources/InventoryItems/Stick.tres" id="5_kl6sf"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8momq"]
 radius = 16.0

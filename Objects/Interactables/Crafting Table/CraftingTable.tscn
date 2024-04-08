@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://bfhellko8kxf6"]
 
-[ext_resource type="Script" path="res://Interactables/Crafting Table/crafting_table.gd" id="1_0cf6y"]
+[ext_resource type="Script" path="res://Objects/Interactables/Crafting Table/crafting_table.gd" id="1_0cf6y"]
 [ext_resource type="Texture2D" uid="uid://csw85guwupk16" path="res://icon.svg" id="1_ak8la"]
 [ext_resource type="Texture2D" uid="uid://70kyjtomtkee" path="res://Assets/UI/Inventory Background.png" id="3_5t4sq"]
-[ext_resource type="Script" path="res://Interaction/interactable.gd" id="4_gmc5q"]
+[ext_resource type="Script" path="res://Components/Interaction/interactable.gd" id="4_gmc5q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ugpsv"]
 size = Vector2(32, 32)

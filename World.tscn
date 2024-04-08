@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" path="res://world.gd" id="1_2gxe0"]
 [ext_resource type="Texture2D" uid="uid://5vqpauv34vo6" path="res://Assets/Terrain/roguelikeSheet_transparent.png" id="1_xn2ec"]
-[ext_resource type="PackedScene" uid="uid://djhh70yahehd" path="res://Player/Player.tscn" id="2_a664c"]
+[ext_resource type="PackedScene" uid="uid://djhh70yahehd" path="res://Objects/Player/Player.tscn" id="2_a664c"]
 [ext_resource type="PackedScene" uid="uid://0r0i1srojycx" path="res://UI/UI.tscn" id="3_w6puv"]
-[ext_resource type="PackedScene" uid="uid://huuklshdoosx" path="res://Enemies/Dummy.tscn" id="4_d8oxu"]
-[ext_resource type="PackedScene" uid="uid://bfhellko8kxf6" path="res://Interactables/Crafting Table/CraftingTable.tscn" id="6_mx2ad"]
-[ext_resource type="PackedScene" uid="uid://cfo6rt3lhtdxk" path="res://Interactables/Thing.tscn" id="7_607aa"]
-[ext_resource type="PackedScene" uid="uid://naxt83u0uugi" path="res://Mineables/Tree.tscn" id="8_aufte"]
+[ext_resource type="PackedScene" uid="uid://huuklshdoosx" path="res://Objects/Enemies/Dummy.tscn" id="4_d8oxu"]
+[ext_resource type="PackedScene" uid="uid://bfhellko8kxf6" path="res://Objects/Interactables/Crafting Table/CraftingTable.tscn" id="6_mx2ad"]
+[ext_resource type="PackedScene" uid="uid://cfo6rt3lhtdxk" path="res://Objects/Interactables/Thing.tscn" id="7_607aa"]
+[ext_resource type="PackedScene" uid="uid://naxt83u0uugi" path="res://Objects/Mineables/Tree.tscn" id="8_aufte"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_fv1h5"]
 vertices = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
