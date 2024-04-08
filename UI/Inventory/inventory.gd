@@ -1,7 +1,7 @@
 extends Control
 
 @onready var slot_count := $NinePatchRect/GridContainer.get_child_count()
-var inventory_data := preload("res://Resources/PlayerInventory.tres")
+var inventory_data := preload("res://Resources/Inventory Resources/PlayerInventory.tres")
 
 func update_inventory():
 	var inventory_item_count := inventory_data.items.size()

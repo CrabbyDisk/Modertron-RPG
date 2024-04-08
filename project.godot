@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-InteractionManager="*res://Interaction/interaction_manager.gd"
+InteractionManager="*res://Components/Interaction/interaction_manager.gd"
 
 [display]
 
@@ -32,9 +32,8 @@ window/stretch/aspect="keep_height"
 folder_colors={
 "res://Assets/": "teal",
 "res://Components/": "orange",
-"res://Enemies/": "red",
-"res://Pathfinding/": "gray",
-"res://Player/": "blue",
+"res://Objects/": "red",
+"res://Objects/Player/": "blue",
 "res://Resources/": "purple",
 "res://UI/": "green"
 }
