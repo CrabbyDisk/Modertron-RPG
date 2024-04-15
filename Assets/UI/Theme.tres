@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=5 format=3 uid="uid://d35gmpsqpfua2"]
 
-[ext_resource type="FontFile" uid="uid://dpa1dmhvf5u5l" path="res://Assets/UI/PixelifySans.ttf" id="1_pxxpb"]
+[ext_resource type="FontFile" uid="uid://3bkj4rmj4xdx" path="res://Assets/UI/VT323-Regular.ttf" id="1_53s1y"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_63owx"]
 bg_color = Color(0.584314, 0.552941, 0.541176, 1)
@@ -59,8 +59,8 @@ anti_aliasing = false
 [resource]
 Button/colors/font_color = Color(0, 0, 0, 1)
 Button/font_sizes/font_size = 30
-Button/fonts/font = ExtResource("1_pxxpb")
+Button/fonts/font = ExtResource("1_53s1y")
 Button/styles/hover = SubResource("StyleBoxFlat_63owx")
 Button/styles/normal = SubResource("StyleBoxFlat_ruska")
 Button/styles/pressed = SubResource("StyleBoxFlat_ydb40")
-Label/fonts/font = ExtResource("1_pxxpb")
+Label/fonts/font = ExtResource("1_53s1y")

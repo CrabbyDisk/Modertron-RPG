@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3xupvvaqgtlg"
-path="res://.godot/imported/Axe Head.png-c48466902425157e019e7f3707333f82.ctex"
+uid="uid://cd7gd8o5pj8tt"
+path="res://.godot/imported/Buttons_0003.png-4d4b61a52ff8430fd81749d6d3b2579e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Weapon Textures/Axe/Axe Head.png"
-dest_files=["res://.godot/imported/Axe Head.png-c48466902425157e019e7f3707333f82.ctex"]
+source_file="res://Assets/UI/Buttons/Buttons_0003.png"
+dest_files=["res://.godot/imported/Buttons_0003.png-4d4b61a52ff8430fd81749d6d3b2579e.ctex"]
 
 [params]
 
